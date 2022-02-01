@@ -13,9 +13,7 @@
 <body>
 @include('layout.menu')
 <div class="container">
-    <div class="row">
-
-    </div>
+    @yield('content')
 </div>
 <div class="btn-add">
     <i class='bx bx-list-plus'></i>
