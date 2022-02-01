@@ -12,9 +12,9 @@ body{
     bottom: 1rem;
     right: 1rem;
     border-radius: 50%;
-    background-color: #c70000;
-    width: 5em;
-    height: 5em;
+    background-color: #1a6501;
+    width: 4.5em;
+    height: 4.5em;
     margin: 0;
     padding: 0;
 }
@@ -25,5 +25,11 @@ body{
     height: 100%;
     font-size: 60px;
     text-align: center;
-    top: 13%;
+    top: 9%;
+}
+
+.list{
+    color: black;
+    margin-top: 1rem;
+    background-color: white;
 }
