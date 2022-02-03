@@ -1,21 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-        <span class="navbar-brand" href="#">Bruh</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
-        </div>
+<nav>
+    <div class="nav">
+        <ul>
+            <li class="list active">
+                <a>
+                    <span class="icon">
+                        <ion-icon name="add"></ion-icon>
+                    </span>
+                    <span class="text">Új lista</span>
+                </a>
+            </li>
+            <li class="list">
+                <a>
+                    <span class="icon">
+                        <ion-icon name="settings"></ion-icon>
+                    </span>
+                    <span class="text">Beállítások</span>
+                </a>
+            </li>
+            <li class="list">
+                <a>
+                    <span class="icon">
+                        <ion-icon name="list"></ion-icon>
+                    </span>
+                    <span class="text">Listák</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
     </div>
 </nav>
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) =>
+            item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item) =>
+    item.addEventListener('click', activeLink));
+</script>

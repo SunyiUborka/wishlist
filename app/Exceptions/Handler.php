@@ -39,11 +39,11 @@ class Handler extends ExceptionHandler
         });
     }
 
-    public function render($request, Exception $exception)
+    public function render($request, Throwable $e)
     {
         // This will replace our 404 response with
         // a JSON response.
-        if ($exception instanceof ModelNotFoundException &&
+        if ($e instanceof ModelNotFoundException &&
             $request->wantsJson())
         {
             return response()->json([
@@ -51,6 +51,6 @@ class Handler extends ExceptionHandler
             ], 404);
         }
 
-        return parent::render($request, $exception);
+        return parent::render($request, $e);
     }
 }

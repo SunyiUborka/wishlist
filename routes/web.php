@@ -13,8 +13,11 @@ use \App\Http\Controllers\UserController;
 |
 */
 
-Route::get('articles', 'ArticleController@index');
-Route::get('articles/{article}', 'ArticleController@show');
-Route::post('articles', 'ArticleController@store');
-Route::put('articles/{article}', 'ArticleController@update');
-Route::delete('articles/{article}', 'ArticleController@delete');
+/*Route::get('articles', [\App\Http\Controllers\ArticleController::class, 'index']);
+Route::get('articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
+Route::post('articles', [\App\Http\Controllers\ArticleController::class, 'store']);
+Route::put('articles/{article}', [\App\Http\Controllers\ArticleController::class, 'update']);
+Route::delete('articles/{article}', [\App\Http\Controllers\ArticleController::class, 'delete']);*/
+Route::get('/', function (){
+   return view('wishlist.home');
+});
