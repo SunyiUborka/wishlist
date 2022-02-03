@@ -1,13 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class wishlist extends Model
+class Wishlist extends Model
 {
-    use HasFactory;
-
     protected $primaryKey = 'groupe_id';
 }

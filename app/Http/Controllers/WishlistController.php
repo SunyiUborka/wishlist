@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\wishlist;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 
 class WishlistController extends Controller
@@ -24,7 +24,7 @@ class WishlistController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class WishlistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\wishlist  $wishlist
+     * @param  \App\Models\Wishlist  $wishlist
      * @return \Illuminate\Http\Response
      */
-    public function show(wishlist $wishlist)
+    public function show(Wishlist $wishlist)
     {
         //
     }
@@ -52,10 +52,10 @@ class WishlistController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\wishlist  $wishlist
+     * @param  \App\Models\Wishlist  $wishlist
      * @return \Illuminate\Http\Response
      */
-    public function edit(wishlist $wishlist)
+    public function edit(Wishlist $wishlist)
     {
         //
     }
@@ -64,10 +64,10 @@ class WishlistController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\wishlist  $wishlist
+     * @param  \App\Models\Wishlist  $wishlist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, wishlist $wishlist)
+    public function update(Request $request, Wishlist $wishlist)
     {
         //
     }
@@ -75,10 +75,10 @@ class WishlistController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\wishlist  $wishlist
+     * @param  \App\Models\Wishlist  $wishlist
      * @return \Illuminate\Http\Response
      */
-    public function destroy(wishlist $wishlist)
+    public function destroy(Wishlist $wishlist)
     {
         //
     }
