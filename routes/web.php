@@ -29,11 +29,3 @@ Route::get('/google-login', [\App\Http\Controllers\GoogleAuthController::class,'
 Route::get('/callback', [\App\Http\Controllers\GoogleAuthController::class,'handleProviderCallback']);
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
