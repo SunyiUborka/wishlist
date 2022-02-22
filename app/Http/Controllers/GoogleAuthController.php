@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Socialite;
+use Auth;
+use Exception;
+
 
 class GoogleAuthController extends Controller
 {

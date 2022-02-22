@@ -25,10 +25,10 @@ Route::get('/', function (){
 
 Auth::routes();
 
-Route::get('/google-login', 'GoogleAuthController@redirectToProvider');
-Route::get('/callback', 'GoogleAuthController@handleProviderCallback');
+Route::get('/google-login', [\App\Http\Controllers\GoogleAuthController::class,'redirectToProvider']);
+Route::get('/callback', [\App\Http\Controllers\GoogleAuthController::class,'handleProviderCallback']);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 
 Auth::routes();
 
