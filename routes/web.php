@@ -21,3 +21,19 @@ Route::delete('articles/{article}', [\App\Http\Controllers\ArticleController::cl
 Route::get('/', function (){
    return view('wishlist.home');
 });
+
+
+Auth::routes();
+
+Route::get('/google-login', 'GoogleAuthController@redirectToProvider');
+Route::get('/callback', 'GoogleAuthController@handleProviderCallback');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
