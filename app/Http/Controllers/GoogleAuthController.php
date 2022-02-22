@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 use Exception;
@@ -29,7 +31,7 @@ class GoogleAuthController extends Controller
                 $user->name = $googleUser->name;
                 $user->email = $googleUser->email;
                 $user->google_id = $googleUser->id;
-                $user->password = md5(rand(1, 10000));
+                $user->password = Hash::make(Str::random(16));
                 $user->save();
                 Auth::loginUsingId($user->id);
             }
