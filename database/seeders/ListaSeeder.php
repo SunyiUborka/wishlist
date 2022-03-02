@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\lista;
 use Illuminate\Database\Seeder;
 
 class ListaSeeder extends Seeder
@@ -13,6 +14,21 @@ class ListaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        lista::create([
+            'name' => "teszt lista",
+            'member' => "csehi.rolcsi@gmail.com"
+        ]);
+        lista::create([
+            'name' => "teszt lista",
+            'member' => "csehi.rolcsi@gmail.com"
+        ]);
+        lista::create([
+            'name' => "teszt lista",
+            'member' => "csehi.rolcsi@gmail.com"
+        ]);
+        lista::create([
+            'name' => "teszt lista",
+            'member' => "csehi.rolcsi@gmail.com"
+        ]);
     }
 }

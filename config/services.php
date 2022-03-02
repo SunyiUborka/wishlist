@@ -32,6 +32,6 @@ return [
     'google' => [
         'client_id' => '31195595572-nc57aprt5lsie75ralbc60fm5k6o8ubq.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'https://api.sunyiuborka.works/callback'
+        'redirect' => 'http://localhost:8881/callback'
     ],
 ];

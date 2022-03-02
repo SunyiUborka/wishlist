@@ -18,14 +18,11 @@ Route::get('articles/{article}', [\App\Http\Controllers\ArticleController::class
 Route::post('articles', [\App\Http\Controllers\ArticleController::class, 'store']);
 Route::put('articles/{article}', [\App\Http\Controllers\ArticleController::class, 'update']);
 Route::delete('articles/{article}', [\App\Http\Controllers\ArticleController::class, 'delete']);*/
-Route::get('/', function (){
-   return view('wishlist.home');
-});
-
 
 Auth::routes();
 
 Route::get('/google-login', [\App\Http\Controllers\GoogleAuthController::class,'redirectToProvider']);
 Route::get('/callback', [\App\Http\Controllers\GoogleAuthController::class,'handleProviderCallback']);
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('/newlist', [\App\Http\Controllers\SiteController::class, 'listnew'])->name('list.new');
+Route::get('/newitem', [\App\Http\Controllers\SiteController::class, 'itemnew'])->name('item.new');
+Route::get('/', [\App\Http\Controllers\SiteController::class,'index'])->name('home');

@@ -25,8 +25,12 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validated();
-        return item::create($data);
+        $data = $request->validate([
+            'name' => "required|min:3|max:255"
+        ]);
+        $data['desc'] = false;
+        item::insert($data);
+        return redirect(route('home'));
     }
 
     /**

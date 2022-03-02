@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root{
+    --text-normal: rgba(220,221,222, 0.95);
+    --background-primary: rgba(54, 57, 63, 0.95);
+    --background-secondary: rgba(47, 49, 54, 0.95);
+}
+
 *{
     margin:0;
     padding: 0;
@@ -101,6 +107,14 @@ nav{
     transition: 0.5s;
 }
 
+form, .card{
+    background: var(--background-secondary);
+}
+.btn{
+    margin-top: 1rem;
+    color: var(--text-normal);
+    background-color: rgba(79, 84, 92, 0.95);
+}
 /*.indicator::before{
     content: '';
     position: absolute;

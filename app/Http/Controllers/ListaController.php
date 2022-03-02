@@ -25,8 +25,12 @@ class ListaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validated();
-        return lista::create($data);
+        $data = $request->validate([
+            'name' => "required|min:3|max:255",
+            'member' => "required|min:3|max:255"
+        ]);
+        lista::insert($data);
+        return redirect(route('home'));
     }
 
     /**

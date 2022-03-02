@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
@@ -35,7 +35,7 @@ class GoogleAuthController extends Controller
                 $user->save();
                 Auth::loginUsingId($user->id);
             }
-            return redirect()->to('/home');
+            return redirect()->to(route('home'));
         } catch (Exception $e) {
             dd($e->getMessage());
         }

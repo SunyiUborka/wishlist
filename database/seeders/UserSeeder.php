@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -14,14 +16,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        ser::truncate();
+        //ser::truncate();
 
         $faker = \Faker\Factory::create();
 
-        $password = Hash::make('toptal');
+        $password = Hash::make('adminadmin');
 
         User::create([
-            'name' => 'Administrator',
+            'name' => 'admin',
             'email' => 'admin@test.com',
             'password' => $password,
         ]);

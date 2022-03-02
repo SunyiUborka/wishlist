@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class lista extends Model
 {
+    public $timestamps = false;
     protected $fillable = [
         'id',
         'name',

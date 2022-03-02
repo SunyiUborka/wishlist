@@ -30,6 +30,6 @@ Route::delete('/listas/{Id}',[\App\Http\Controllers\ListaController::class,'dest
  */
 Route::get('/listas/{id}/items',[\App\Http\Controllers\ItemController::class,'index'])->name('items.index');
 Route::get('/listas/items/{id}',[\App\Http\Controllers\ItemController::class,'show'])->name('items.show');
-Route::post('listas/{id}/items',[\App\Http\Controllers\ItemController::class,'store'])->name("items.store");
+Route::post('listas/items',[\App\Http\Controllers\ItemController::class,'store'])->name("items.store");
 Route::put('/listas/items/{id}' ,[\App\Http\Controllers\ItemController::class,'update'])->name("items.update");
 Route::delete('/listas/{id}/items',[\App\Http\Controllers\ItemController::class,'destroy'])->name("items.destroy");
